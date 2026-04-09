@@ -7,7 +7,10 @@ function App() {
   return (
     <div className="app-shell">
       <header className="topbar">
-        <div className="brand">Shishir's Blog</div>
+        <div className="brand-wrap">
+          <div className="brand-kicker">Personal site</div>
+          <div className="brand">Shishir's Blog</div>
+        </div>
         <nav className="nav-links">
           <NavLink to="/" end>
             About
@@ -25,7 +28,8 @@ function App() {
       </main>
 
       <footer className="footer">
-        © {new Date().getFullYear()} Shishir. Built with React + Vite.
+        <p>© {new Date().getFullYear()} Shishir Singh.</p>
+        <p>Built with React, Vite, and a lot more personality.</p>
       </footer>
     </div>
   )
