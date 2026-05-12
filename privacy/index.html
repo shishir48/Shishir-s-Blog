@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Privacy Policy for Local Legend — discover great local businesses near you." />
+    <title>Privacy Policy — Local Legend</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #f5efe7;
+        --surface: rgba(255, 251, 247, 0.88);
+        --surface-accent: #261f1c;
+        --line: rgba(36, 30, 27, 0.12);
+        --text-soft: #5e534d;
+        --accent: #d95d39;
+        --shadow: 0 18px 45px rgba(42, 29, 18, 0.08);
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Manrope", "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(229, 108, 80, 0.22), transparent 30%),
+          radial-gradient(circle at top right, rgba(41, 92, 255, 0.18), transparent 24%),
+          linear-gradient(180deg, #f8f2eb 0%, #efe5d9 100%);
+        color: #201a17;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+        background-size: 48px 48px;
+        pointer-events: none;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent);
+        -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent);
+      }
+
+      a { color: inherit; }
+      h1, h2, h3, p { margin-top: 0; }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        width: min(1180px, calc(100% - 32px));
+        margin: 18px auto 0;
+        padding: 1rem 1.2rem;
+        background: rgba(255, 248, 241, 0.82);
+        border: 1px solid rgba(92, 70, 57, 0.12);
+        border-radius: 999px;
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        box-shadow: var(--shadow);
+      }
+
+      .brand { font-size: 1.2rem; font-weight: 800; text-decoration: none; }
+      .brand-kicker {
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.76rem;
+        font-weight: 700;
+        color: var(--text-soft);
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        border-radius: 999px;
+        background: var(--surface-accent);
+        color: #fff8f3;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+
+      main {
+        width: min(780px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 3rem 1rem 5rem;
+      }
+
+      .page-header {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 32px;
+        padding: 2.5rem;
+        margin-bottom: 2rem;
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+        animation: rise 0.5s ease both;
+      }
+
+      .page-header::after {
+        content: "";
+        position: absolute;
+        inset: auto -30px -60px auto;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(217, 93, 57, 0.26), transparent 72%);
+      }
+
+      .eyebrow {
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.76rem;
+        font-weight: 700;
+        color: var(--accent);
+        margin-bottom: 0.6rem;
+      }
+
+      .page-header h1 {
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        line-height: 1;
+        letter-spacing: -0.04em;
+        margin-bottom: 1rem;
+      }
+
+      .page-header p {
+        color: var(--text-soft);
+        font-size: 1rem;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      .content {
+        display: grid;
+        gap: 1.25rem;
+        animation: rise 0.5s 0.1s ease both;
+      }
+
+      .section-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 1.75rem 2rem;
+        box-shadow: var(--shadow);
+      }
+
+      .section-card h2 {
+        font-size: 1.2rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.85rem;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+
+      .section-card h2::before {
+        content: "";
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--accent);
+        flex-shrink: 0;
+      }
+
+      .section-card p, .section-card li {
+        color: var(--text-soft);
+        font-size: 1rem;
+        line-height: 1.75;
+        margin-bottom: 0.6rem;
+      }
+
+      .section-card ul {
+        padding-left: 1.2rem;
+        margin: 0.5rem 0 0;
+      }
+
+      .section-card li { margin-bottom: 0.4rem; }
+
+      .contact-card {
+        background: linear-gradient(135deg, rgba(15, 95, 102, 0.92), rgba(22, 56, 73, 0.96));
+        color: #e7f6f7;
+        border-radius: 24px;
+        padding: 1.75rem 2rem;
+        box-shadow: var(--shadow);
+      }
+
+      .contact-card h2 {
+        font-size: 1.2rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.6rem;
+        color: #e7f6f7;
+      }
+
+      .contact-card p { color: rgba(231, 246, 247, 0.82); font-size: 1rem; line-height: 1.75; margin: 0; }
+
+      .contact-card a { color: #fff0bd; font-weight: 700; }
+
+      footer {
+        text-align: center;
+        color: var(--text-soft);
+        font-size: 0.9rem;
+        padding-top: 2rem;
+        animation: rise 0.5s 0.2s ease both;
+      }
+
+      @keyframes rise {
+        from { opacity: 0; transform: translateY(14px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      @media (max-width: 640px) {
+        .topbar { border-radius: 22px; align-items: start; margin-top: 12px; }
+        .page-header { padding: 1.5rem; }
+        .section-card { padding: 1.25rem 1.4rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <div class="brand-kicker">Privacy Policy</div>
+        <a href="/" class="brand" style="text-decoration:none;color:inherit;">Local Legend</a>
+      </div>
+      <span class="badge">App Policy</span>
+    </header>
+
+    <main>
+      <div class="page-header">
+        <p class="eyebrow">Legal</p>
+        <h1>Privacy Policy</h1>
+        <p>Effective date: May 12, 2026. This policy explains what data Local Legend collects, how it is used, and your rights as a user.</p>
+      </div>
+
+      <div class="content">
+
+        <div class="section-card">
+          <h2>What is Local Legend</h2>
+          <p>Local Legend is a mobile app that helps you discover high-quality local businesses in cities you select. You can browse curated listings, read business details, and find hidden gems in your area.</p>
+        </div>
+
+        <div class="section-card">
+          <h2>Information We Collect</h2>
+          <p>We collect only what is necessary to provide the service:</p>
+          <ul>
+            <li><strong>Account information</strong> — name and email address when you register.</li>
+            <li><strong>City selection</strong> — the city you choose to browse businesses in. We do not track your precise GPS location.</li>
+            <li><strong>Usage data</strong> — which screens you visit and features you use, to help us improve the app.</li>
+            <li><strong>Device information</strong> — device type and operating system version for troubleshooting.</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <h2>How We Use Your Information</h2>
+          <ul>
+            <li>Show you business listings relevant to your selected city.</li>
+            <li>Maintain and improve app performance and reliability.</li>
+            <li>Send optional account-related notifications (you can opt out at any time).</li>
+            <li>Detect and prevent abuse or fraudulent activity.</li>
+          </ul>
+          <p>We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
+        </div>
+
+        <div class="section-card">
+          <h2>Data Storage and Security</h2>
+          <p>Your data is stored on secure servers. We use industry-standard encryption in transit (HTTPS/TLS) and at rest. Access is restricted to authorised personnel only. No system is completely immune to risk; we will notify you promptly if a breach affects your data.</p>
+        </div>
+
+        <div class="section-card">
+          <h2>Third-Party Services</h2>
+          <p>Local Legend may use the following third-party services, each governed by their own privacy policies:</p>
+          <ul>
+            <li><strong>Google Play Services</strong> — for app distribution and updates.</li>
+            <li><strong>Analytics tools</strong> — to understand aggregate usage patterns. No personally identifiable data is shared.</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <h2>Children's Privacy</h2>
+          <p>Local Legend is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us personal data, contact us and we will delete it promptly.</p>
+        </div>
+
+        <div class="section-card">
+          <h2>Your Rights</h2>
+          <p>You have the right to:</p>
+          <ul>
+            <li>Access the personal data we hold about you.</li>
+            <li>Request correction or deletion of your data.</li>
+            <li>Withdraw consent for optional data processing at any time.</li>
+            <li>Export your data in a portable format.</li>
+          </ul>
+          <p>To exercise any of these rights, email us at the address below.</p>
+        </div>
+
+        <div class="section-card">
+          <h2>Changes to This Policy</h2>
+          <p>We may update this policy as the app evolves. We will notify you of significant changes via in-app notice or email. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+        </div>
+
+        <div class="contact-card">
+          <h2>Contact Us</h2>
+          <p>Questions or requests about your privacy? Reach out at <a href="mailto:shishirsingh48@gmail.com">shishirsingh48@gmail.com</a>. We aim to respond within 48 hours.</p>
+        </div>
+
+      </div>
+
+      <footer>
+        <p>&copy; 2026 Local Legend. All rights reserved.</p>
+      </footer>
+    </main>
+  </body>
+</html>
