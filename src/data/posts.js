@@ -1,41 +1,28 @@
 export const posts = [
   {
     id: 1,
-    title: "Designing a blog that feels personal",
+    title: "3 years at Eisenvault — what I actually learned",
     excerpt:
-      "A few thoughtful layout and writing choices can make even a tiny blog feel memorable and alive.",
+      "Production bugs, an offline-sync desktop app, LLM experiments, and a trip to Kathmandu. Here is what stuck.",
     date: "April 4, 2026",
-    category: "Design",
-    readTime: "4 min read",
+    category: "Engineering",
+    readTime: "5 min read",
     cover:
-      "Layered gradients, editorial typography, and spacious cards create a blog that feels warm and intentional.",
+      "Real production work teaches things no tutorial can — edge cases, user trust, and the cost of a bad deploy.",
     content:
-      "The fastest way to make a personal blog feel better is to stop treating it like a demo. Add a point of view, use stronger headings, and give every page a reason to exist. A small site can still feel premium when the design supports the story you want to tell.",
+      "I joined Eisenvault in 2021 as a software engineer and spent three years shipping things that real users depended on. The first year was mostly bug fixes — 50+ production issues across the document management app. Unglamorous, but it built a sense for how software breaks in the real world.\n\nThe project I am most proud of is the offline-sync desktop app. Users needed Google Drive-style sync without internet access. I built it with Electron, Node.js, and a queue-based conflict resolution system. Getting the sync logic right without a backend to lean on was the hardest problem I had faced to that point.\n\nI also deployed LLaMA 2 and Mistral AI locally on Ubuntu and Apple M1 hardware, then built an invoice parser that the finance team actually uses. That project made clear that the gap between experimenting with AI and shipping something useful is mostly about prompt design and output parsing — not the model.\n\nThe highlight of the whole stint was flying to Kathmandu to deliver an on-premises deployment for Kumari Bank — Eisenvault's first enterprise on-prem customer. Watching software you built go live in a bank in Nepal is a different feeling from merging a PR.",
   },
   {
     id: 2,
-    title: "Books that changed how I think",
+    title: "I opened a gaming café. Here is what happened.",
     excerpt:
-      "A handful of books have shaped how I approach technology, history, and building a meaningful career.",
-    date: "March 27, 2026",
-    category: "Books",
-    readTime: "5 min read",
-    cover:
-      "Thoughtful reading expands your taste, your patience, and your ability to connect ideas across disciplines.",
-    content:
-      "Books like Sapiens stay with you because they compress a huge amount of thinking into a form you can revisit. The best reads do more than teach facts. They sharpen your judgment, widen your curiosity, and leave you with better questions than you had before.",
-  },
-  {
-    id: 3,
-    title: "What I am learning with React and Vite",
-    excerpt:
-      "Shipping small projects quickly is teaching me more about product polish than any tutorial ever could.",
+      "₹10L in revenue, 2 employees, Tekken 7 tournaments, and more operational chaos than any engineering job prepared me for.",
     date: "March 19, 2026",
-    category: "Development",
-    readTime: "3 min read",
+    category: "Entrepreneurship",
+    readTime: "4 min read",
     cover:
-      "Fast tooling encourages experimentation, and experimentation is where good frontend instincts are built.",
+      "Running a physical business teaches you that most problems cannot be fixed with a hotfix and a redeploy.",
     content:
-      "React and Vite make it easy to move from idea to interface, but the real learning starts after the first version works. That is where details matter: hierarchy, spacing, content quality, and the confidence to refine something until it actually feels good to use.",
+      "In March 2024 I opened Nevermind Gaming Café — a 24x7 gaming café in Noida. I had just left my engineering job and wanted to try something completely different.\n\nThe first month was chaos. Equipment procurement, shift scheduling, vendor negotiations, internet redundancy, and a floor that needed someone on it at 3am on weekdays. None of that is in any software engineering playbook.\n\nWe hit ₹10L in revenue in the first year. I hired two employees, built a shift rotation that actually held, and ran competitive Tekken 7 and FIFA 25 tournaments that brought in 20+ participants and regulars who kept coming back.\n\nWhat surprised me most was how much the business depended on trust and consistency — the same things that make good software. Users return when something works reliably. Customers return when they feel the place is run with care.\n\nI closed it in April 2025 after a year. The economics of a physical space in that location stopped making sense. But the year taught me more about operations, people management, and decision-making under uncertainty than I expected. Worth it.",
   },
 ]

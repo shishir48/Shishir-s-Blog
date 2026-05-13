@@ -29,7 +29,7 @@ function App() {
 
       <footer className="footer">
         <p>© {new Date().getFullYear()} Shishir Singh.</p>
-        <p>Built with React, Vite, and a lot more personality.</p>
+        <p>Built with Vite and too many browser tabs.</p>
       </footer>
     </div>
   )

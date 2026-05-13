@@ -1,79 +1,55 @@
 import { Link } from "react-router-dom"
 import { posts } from "../data/posts"
 
-function About() {
-  const featuredPosts = posts.slice(0, 2)
 
+function About() {
   return (
     <section className="page-section">
-      <div className="hero-grid">
-        <div className="hero-copy">
-          <p className="eyebrow">Developer, reader, builder</p>
-          <h1>Hello, I am Shishir.</h1>
-          <p className="hero-text">
-            I am documenting what I am learning about web development, design,
-            and building a career with intention. This blog is my place to
-            share useful ideas and the lessons I want to remember.
-          </p>
-          <div className="hero-actions">
-            <Link to="/blogs" className="button-primary">
-              Explore Posts
-            </Link>
-            <a className="button-secondary" href="mailto:hello@shishir.dev">
-              Contact Me
-            </a>
-          </div>
+
+      <div className="home-intro">
+        <p className="eyebrow">Software engineer · Node.js · AI tools</p>
+        <h1>Shishir Singh</h1>
+        <p className="home-bio">
+          3 years shipping production software at Eisenvault — backend services,
+          an offline-sync desktop app, mobile bug fixes, and local LLM tooling.
+          Also ran a gaming café for a year. Writing here about engineering and
+          the things worth remembering.
+        </p>
+        <div className="home-contact">
+          <a href="mailto:shishirsingh48@gmail.com">shishirsingh48@gmail.com</a>
+          <span>·</span>
+          <span>+91 97927 06679</span>
+          <span>·</span>
+          <span>Noida, India</span>
         </div>
-
-        <aside className="hero-panel">
-          <div className="hero-orb" />
-          <p className="panel-label">Currently focused on</p>
-          <ul className="focus-list">
-            <li>Crafting cleaner React interfaces</li>
-            <li>Writing posts that feel useful and human</li>
-            <li>Learning through small, shippable projects</li>
-          </ul>
-        </aside>
       </div>
 
-      <div className="info-grid">
-        <article className="profile-card">
-          <p className="panel-label">About Me</p>
-          <h2>Building taste alongside technical skills</h2>
-          <p>
-            I enjoy frontend work because it sits between logic and expression.
-            The code needs to work, but it also needs to feel clear, deliberate,
-            and easy for people to trust.
-          </p>
-        </article>
+      <div className="home-section">
+        <p className="home-section-label">Stack</p>
+        <p className="home-stack">
+          Node.js · Python · Electron · Microservices · REST APIs · LLaMA 2 · Mistral AI · DigitalOcean · Linux
+        </p>
+      </div>
 
-        <article className="profile-card">
-          <p className="panel-label">Tech Stack</p>
-          <h2>What I like working with</h2>
-          <div className="pill-row">
-            <span>React</span>
-            <span>Vite</span>
-            <span>JavaScript</span>
-            <span>UI Design</span>
-            <span>Responsive CSS</span>
-          </div>
-        </article>
-
-        <article className="profile-card">
-          <p className="panel-label">Featured Writing</p>
-          <h2>Recent posts from the blog</h2>
-          <div className="mini-post-list">
-            {featuredPosts.map((post) => (
-              <Link key={post.id} to={`/blogs/${post.id}`} className="mini-post">
-                <strong>{post.title}</strong>
-                <span>
-                  {post.category} · {post.readTime}
-                </span>
+      <div className="home-section">
+        <p className="home-section-label">Writing</p>
+        <div className="post-list">
+          {posts.map((post) => (
+            <article key={post.id} className="post-row">
+              <Link to={`/blogs/${post.id}`} className="post-row-link">
+                <div className="post-row-meta">
+                  <span className="post-row-category">{post.category}</span>
+                  <span>{post.date}</span>
+                  <span>{post.readTime}</span>
+                </div>
+                <h2>{post.title}</h2>
+                <p>{post.excerpt}</p>
               </Link>
-            ))}
-          </div>
-        </article>
+            </article>
+          ))}
+        </div>
       </div>
+
     </section>
   )
 }
